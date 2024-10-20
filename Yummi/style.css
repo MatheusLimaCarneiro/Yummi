@@ -653,16 +653,6 @@ margin-bottom: 40px;
     grid-template-columns: 1fr;
   }
   
- /* Testimony  */
-
-@media (max-width: 768px) {
-  .slide-content{
-    margin: 0 10px;
-  }
-  .button-swiper{
-    display: none;
-  }
-}
 
 /* About */
 
@@ -685,7 +675,7 @@ margin-bottom: 40px;
   }
 }
 
-/* Services */
+/* About: Services */
 
 @media (max-width: 768px) {
   .section-servicos{
@@ -707,15 +697,89 @@ margin-bottom: 40px;
 /* Contact */
 
 @media (max-width: 768px) {
-  .section-contato{
-    padding-top: 30px;
-  }
-  .titulo-contato{
-    font-size: 30px;
-    margin-bottom: 30px;
-  }
   form{
     width: 100%;
+  }
+}
+
+/* Services */
+@media (max-width: 479px) {
+  .card-img-top {
+    height: 319px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .d-flex h3 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1.0rem;
+  }
+}
+
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .card-img-top {
+    height: 310px;
+  }
+
+  .card-title {
+    font-size: 1.4rem;
+  }
+
+  .card-text {
+    font-size: 1.1rem;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .d-flex h3 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1.0rem;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .card-img-top {
+    height: 300px;
+  }
+
+  .card-title {
+    font-size: 1.6rem;
+  }
+
+  .card-text {
+    font-size: 1.3rem;
+  }
+
+  .card-body {
+    padding: 2rem;
+  }
+
+  .d-flex h3 {
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
   }
 }
 
@@ -745,7 +809,7 @@ margin-bottom: 40px;
 }
 @media (max-width: 480px) {
   .modal-body {
-    width: 90%;
+    width: 100%;
     max-width: 100%; 
   }
 }
