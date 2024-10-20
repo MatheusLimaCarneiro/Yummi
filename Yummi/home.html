@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://kit.fontawesome.com/29034aaceb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header >
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center ">
+                    <a class="navbar-brand " href="home.html">
+                        <img src="imagens/logo-comida.webp" alt="logo-comida" width="150" height="150" class="d-inline-block">
+                    </a>
+                    <h1 id="titulo">Yummi</h1>
+                </div>
+              
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav" id="basico">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Servicos.html" target="_blank">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section-sobre">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section-testemunhos">Testemunho</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Contato.html" target="_blank">Contato</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" id="cadastrar">Cadastrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="ja-tem-conta">Já tem uma conta</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+  
+
+    <div class="modal-content">
+        <div id="fade" class="hide"></div>
+        <div id="modal" class="hide">
+            <div class="modal-body">
+                <div class="login justify-content-center align-items-center">
+                    <h2>Login</h2>
+                    <form action="" method="" class="login-form">
+                        <div class="login-box mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email-login" name="email" required>
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="login-box mb-3">
+                            <label for="senha" class="form-label">Senha</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="senha" name="senha" required>
+                                <span class="input-group-addon">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="lembrar">
+                            <label class="form-check-label" for="lembrar">Lembrar-me</label>
+                        </div>
+                        <button type="submit" class="btn btn-danger bg minha-cor">Entrar</button>
+                    </form>
+            
+                    <a href="#">Ainda não possui cadastro? Cadastre-se</a>
+                    <a href="#">Esqueceu a senha?</a>
+    
+                    <div class="justify-content-flex-end align-items-center">
+                        <a href="#"  class="btn btn-danger bg minha-cor" id="close-modal">Fechar</a>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+    
+
+    <div class="modal-content">
+    
+        <div id="fadec" class="hide"></div>
+        <div id="modalc" class="hide">
+        <div class="modal-body">
+            <div class="cadastrar-modal justify-content-center align-items-center">
+                <h1>Cadastrar</h1>
+                <form action="" method="" class="login-form">
+                    <div class="cadastrar-box mb-4">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome-cadastrar" required>
+                    </div>
+                    
+                    <div class="cadastrar-box mb-4">
+                        <label for="email" class="form-label">E-mail</label>
+                        <div class="input-group">
+                            <input type="email" class="form-control" id="email-cadastrar" name="email" required>
+                            <span class="input-group-email">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="cadastrar-box mb-3">
+                        <label for="senha" class="form-label">Senha</label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="senha-cadastrar" name="senha" required>
+                            <span class="input-group-addon">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="cadastrar-box mb-3">
+                        <label for="senha" class="form-label">Confirmar Senha</label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="confirmar-senha" name="confirmar-senha" required>
+                            <span class="input-group-addon">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-danger bg minha-cor mt-4">Cadastrar</button>
+                </form>
+        
+                <a href="#" class="mt-3">Esqueceu a senha?</a>
+
+                <a href="#"  class="btn btn-danger bg minha-cor" id="close-modalc">Fechar</a>
+            </div>
+        </div>
+    </div>
+</div>
+     
+
+
+    <div id="mainSlider" class="carousel slide" data-bs-ride="carousel" >
+        <ol class="carousel-indicators">
+            <li data-bs-target="#mainSlider" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#mainSlider" data-bs-slide-to="1" aria-label="Slide 2"></li>
+            <li data-bs-target="#mainSlider" data-bs-slide-to="2" aria-label="Slide 3"></li>
+        </ol>
+      
+        <div class="carousel-inner" >
+            <div class="carousel-item active">
+                <img src="imagens/Comida-Diminuida.jpg" class="d-block w-100" alt="comida-carousel-1">
+                <div class="carousel-caption d-none d-md-block"> 
+                    <h3>Comidas Variadas</h3>
+                    <p>Descubra um mundo de sabores com nossa variedade de pratos. Do tradicional ao contemporâneo, temos tudo o que você precisa para satisfazer seu apetite.</p> 
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/Comida-2.jpeg" class="d-block w-100 " alt="comida-carousel-2">
+             
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Comidas Especiais</h3>
+                    <p >Prepare-se para uma explosão de sabores! Nosso cardápio é uma verdadeira viagem culinária, com pratos que vão aguçar seus sentidos e te levar para lugares exóticos. Experimente combinações inusitadas e descubra novos sabores que vão te surpreender a cada garfada. Venha explorar o mundo da gastronomia conosco!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/R.jpg" class="d-block w-100" alt="comida-carousel-3">
+                <div class="carousel-caption d-none d-md-block"> 
+                    <h3>Comidas Saborosas</h3>
+                <p>Encontre as melhores coisas para você. Nossos pratos são preparados com cuidado e paixão, utilizando ingredientes de alta qualidade. Cada detalhe faz a diferença.</p>
+                </div>
+        </div>
+           
+            </div>
+            <a href="#mainSlider" class="carousel-control-prev" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class=" visually-hidden">Previous</span>
+            </a>
+            <a href="#mainSlider" class="carousel-control-next" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class=" visually-hidden">Next</span>
+            </a>
+        </div>
+    </div>
+        
+          
+  
+ 
+
+
+    <main class="principal">
+        <aside>
+            <div class="cta col-md-9 col-12" data-aos="fade-right">
+                <h2 id="principal-titulo">Yummi</h2>
+                <p class="hero-text">
+                    Experimente uma nova maneira de saborear seus pratos favoritos! Com o Yummi, você tem acesso a uma variedade de restaurantes e pode pedir sua comida preferida com apenas alguns cliques. 
+                    <br>
+                    <span class="highlight">Rapidez e praticidade</span>: Receba seus pedidos quentinhos e saborosos no conforto da sua casa ou escritório. 
+                    Nossa plataforma intuitiva e fácil de usar garante uma experiência de compra rápida e eficiente.
+                    <br> 
+                    <span class="highlight">Diversidade de opções</span>: Explore um mundo de sabores e descubra novos restaurantes. 
+                    Do clássico ao contemporâneo, temos tudo o que você precisa para satisfazer seu paladar.
+                    <br>
+                    <span class="highlight">Qualidade garantida</span>: Trabalhamos com os melhores restaurantes da cidade para oferecer pratos frescos e saborosos, preparados com ingredientes de alta qualidade.
+                    <br>
+                    <span class="cta">Faça seu pedido agora</span> e saboreie a vida!
+                  </p>
+                <br>
+                <a href="" class="cadastrar">Cadastre-se Agora</a>
+                
+                <form class="contas-saber">
+                    <p>Já possui uma conta? <a href="#">Login</a></p>
+                    <p>Lembrou de sua senha? <a href="#">Esqueceu-a?</a></p>
+                </form>
+            </div>
+    
+        </aside>
+        
+        <article>
+            <div class="cta-img" data-aos="fade-left">
+                <img src="imagens/comida-cta.png" alt="imagem comida" class="img-fluid">
+            </div>           
+        </article>
+    </main>
+
+    <section id="section-testemunhos" data-aos="fade-up">
+        <div class="container py-5">
+            <h3 class="text-center" id="titulo-testemunho">Testemunhos</h3>
+        </div>
+       
+        <main id="main-testemunho">
+            <div class="slide-container swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper">
+                        <div class="cardt swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="" alt="testemunho 1" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="testemunhos card-content">
+                                <h2 class="name"></h2>
+                                <p class="description">Comida deliciosa, minha familia achou ótimo. Recomendo!</p>
+    
+                                <i class="fas fa-hand-peace"></i>
+                            </div>
+                        </div>
+    
+                        <div class="cardt swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="" alt="testemunho 2" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="testemunhos card-content">
+                                <h2 class="name"></h2>
+                                <p class="description">A comida estava muito melhor do que eu esperava! Superou minhas expectativas."</p>
+                                <i class="fas fa-hand-peace"></i>
+                            </div>
+                        </div>
+    
+                        <div class="cardt swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="" alt="testemunho 3" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="testemunhos card-content">
+                                <h2 class="name"></h2>
+                                <p class="description">O app é muito fácil de usar e a entrega é super rápida. Amei!</p>
+                                <i class="fas fa-thumbs-up"></i>
+                            </div>
+                        </div>
+    
+                        <div class="cardt swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="" alt="testemunho 4" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="testemunhos card-content">
+                                <h2 class="name"></h2>
+                                <p class="description">Agradeço pela comida deliciosa e pelo atendimento rápido. Com certeza vou pedir de novo!</p>
+                                <i class="fas fa-thumbs-up"></i>
+                            </div>
+                        </div>
+    
+                        <div class="cardt swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="" alt="testemunho 5" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="testemunhos card-content">
+                                <h2 class="name"></h2>
+                                <p class="description">É o melhor delivery que já usei! A comida é muito mais saborosa do que em outros lugares.</p>
+                                <i class="fas fa-hand-peace"></i>
+                            </div>
+                        </div>
+    
+                        <div class="cardt swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="" alt="testemunho 6" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="testemunhos card-content">
+                                <h2 class="name"></h2>
+                                <p class="description">Indico de olhos fechados! A comida é deliciosa e o delivery é super rápido.</p>
+                                <i class="fas fa-hand-peace"></i>
+                            </div>
+                        </div>
+    
+                        <div class="cardt swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="" alt="testemunho 7" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="testemunhos card-content">
+                                <h2 class="name"></h2>
+                                <p class="description">A experiência foi perfeita do início ao fim. O pedido chegou no horário marcado, a comida estava deliciosa e o atendimento foi excelente.</p>
+                                <i class="fas fa-thumbs-up"></i>
+                            </div>
+                        </div>
+    
+                        <div class="cardt swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="" alt="testemunho 8" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="testemunhos card-content">
+                                <h2 class="name"></h2>
+                                <p class="description">O cardápio é incrível! Encontrei tudo o que queria e a comida estava uma delícia.</p>
+                                <i class="fas fa-hand-peace"></i>
+                            </div>
+                        </div>
+    
+                        <div class="cardt swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="" alt="testemunho 9" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="testemunhos card-content">
+                                <h2 class="name"></h2>
+                                <p class="description">O pedido chegou super rápido! A comida estava deliciosa e ainda quentinha</p>
+                                <i class="fas fa-thumbs-up"></i>
+                            </div>
+                        </div>
+    
+                        <div class="cardt swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="" alt="testemunho 10" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="testemunhos card-content">
+                                <h2 class="name"></h2>
+                                <p class="description">A embalagem era muito bonita e segura, a comida chegou intacta.</p>
+                                <i class="fas fa-hand-peace"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-swiper swiper-button-next"></div>
+                <div class="button-swiper swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </main>
+    </section>
+
+    <section id="section-sobre" data-aos="fade-up">
+        <div>
+            <h3 class="titulo-sobre">Sobre a Yummi</h3>
+        </div>
+    
+        <div class="container-fluid">
+            <div id="sobre-yummi">
+                <div class="container">
+                    <div class="row" >
+                        <div class="col-12">
+                        </div>
+                        <div class="col-md-6" data-aos="fade-up-right">
+                            <img class="img-fluid" src="imagens/imagem-comida-sobre.jpg" alt="">
+                        </div>
+                        
+                        <div class="col-md-6" style="color: white;" data-aos="fade-up-left">
+                            <h3>Um site que pensa no cliente</h3>
+                            <p>O Yummi é um site que nasceu para atender as necessidades dos nossos clientes.</p>
+                            <p>Nossa missão é ser a melhor escolha para você comer no local que você mora ou vai.</p>
+                            <p> Nosso objetivo é atender todos os gostos e necessidades dos nossos clientes, sem perder tempo ou prejudicar a qualidade de nossos produtos.</p>
+    
+                            <h3>Nossos valores</h3>
+                            
+                            <ul id="lista-sobre">
+                                <li><i class="fas fa-check"></i> Comida de qualidade</li>
+                                <li><i class="fas fa-check"></i> Atendimento personalizado</li>
+                                <li><i class="fas fa-check"></i> Garantia de entrega</li>
+                                <li><i class="fas fa-check"></i> Ambiente seguro</li>
+                                <li><i class="fas fa-check"></i> Serviço de delivery</li>
+                            </ul>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="sobre-servicos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="titulo-sobre" data-aos="fade-up">Especialidades da Yummi</h3>
+                    </div>
+                    <div class="col-md-4 service-box"  data-aos="zoom-out-up">
+                        <i class="fa-solid fa-burger"></i>
+                        <h4>Hamburguer Artesanal</h4>
+                        <p>Hamburgueres de carne de alta qualidade</p>
+                    </div>
+                    <div class="col-md-4 service-box" data-aos="zoom-out-up">
+                        <i class="fa-solid fa-utensils"></i>
+                        <h4>Comidas Rápidas</h4>
+                        <p>Pratos feitos com ingredientes de qualidade e sabor especial.</p>
+                    </div>
+                    <div class="col-md-4 service-box" data-aos="zoom-out-up">
+                        <i class="fa-solid fa-cake-candles"></i>
+                        <h4>Bolos</h4>
+                        <p>Bolos deliciosos e frescos</p>
+                    </div>
+    
+                    <div class="col-md-4 service-box" data-aos="zoom-out-up">
+                        <i class="fa-solid fa-bread-slice"></i>
+                        <h4>Pizzas</h4>
+                        <p>Experimente nossas pizzas artesanais, com massa leve e crocante e um toque especial no sabor.</p>
+                    </div>
+    
+                 <div class="col-md-4 service-box" data-aos="zoom-out-up">
+                    <i class="fas fa-fish"></i>
+                    <h4>Sushi</h4>
+                    <p>Sushi de peixe fresco e saboroso.</p>
+                </div>
+    
+                <div class="col-md-4 service-box" data-aos="zoom-out-up">
+                    <i class="fas fa-drumstick-bite"></i>
+                    <h4>Carnes</h4>
+                    <p>Carnes de qualidade e sabor especial.</p>
+                </div>
+    
+                </div>
+            </div>
+        </div>
+    
+    </section>
+
+    <footer class="footer" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Sobre Nós</h5>
+                    <p>O Yummi é um site que nasceu para atender as necessidades dos nossos clientes.</p>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5>Contato</h5>
+                    <p>
+                        <i class="fab fa-whatsapp"></i> Whatsapp: +55 11 99999-9999
+                        <br>
+                        <i class="fas fa-phone"></i> Telegone: (11) 99999-9999
+                        <br>
+                        <i class="fas fa-envelope"></i> Email: contato@yummi.com
+                    </p>
+                    <ul class="social-icons">
+                        <li><a href="#" class="icone-footer"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" class="icone-footer"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" class="icone-footer"><i class="fab fa-twitter"></i></a></li> 
+    
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; 2024 Yummi. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/script-Login-Cadastro.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="scripts/script-testemunho.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
