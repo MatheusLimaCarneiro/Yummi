@@ -652,6 +652,7 @@ margin-bottom: 40px;
   .principal {
     grid-template-columns: 1fr;
   }
+}
   
 
 /* About */
@@ -680,6 +681,7 @@ margin-bottom: 40px;
 @media (max-width: 768px) {
   .section-servicos{
     padding-top: 30px;
+    width: 100%;
   }
   .titulo-servicos{
     font-size: 30px;
@@ -812,5 +814,4 @@ margin-bottom: 40px;
     width: 100%;
     max-width: 100%; 
   }
-}
 }
